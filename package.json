@@ -1,0 +1,52 @@
+{
+  "name": "harumcum",
+  "version": "1.0.0",
+  "description": "Zero-configuration TypeScript Standard Validation",
+  "main": "./bin/index.js",
+  "bin": {
+    "standard": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "npm run build:clean && npm run build:webpack",
+    "build:clean": "rm -f ./bin/*.js",
+    "build:webpack": "node_modules/.bin/webpack --display-error-details --config ./webpack.config.ts",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "bin/cli.js",
+    "bin/index.js",
+    "LICENSE",
+    "README.md",
+    "tslint.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MandyRippin/harumcum.git"
+  },
+  "keywords": [
+    "format",
+    "pretty",
+    "eum",
+    "typescript",
+    "ut",
+    "fmt",
+    "ut"
+  ],
+  "author": "DaijaRutherford",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MandyRippin/harumcum.git/issues"
+  },
+  "devDependencies": {
+    "@types/glob": "latest",
+    "@types/node": "latest",
+    "@types/webpack": "^1.12.34",
+    "ts-loader": "latest",
+    "ts-node": "latest",
+    "webpack": "latest"
+  },
+  "dependencies": {
+    "tslint": "latest",
+    "typescript": "latest"
+  }
+}
